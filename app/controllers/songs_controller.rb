@@ -27,6 +27,10 @@ class SongsController < ApplicationController
     render :edit
   end
 
+  def destroy
+    current_song.destroy
+    redirect_to songs_path
+
   private
 
   def songs_params

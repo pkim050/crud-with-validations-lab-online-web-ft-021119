@@ -39,7 +39,7 @@ class SongsController < ApplicationController
   end
 
   def current_song
-    @song = Song.find(params[:id])
+    @song = Song.find_by_id(params[:id])
   end
 
 end

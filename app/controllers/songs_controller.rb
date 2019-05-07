@@ -9,6 +9,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(songs_params)
+    binding.pry
     redirect_to @song and return if @song.save
     render :new
   end
@@ -23,6 +24,7 @@ class SongsController < ApplicationController
 
   def update
     current_song
+    binding.pry
     redirect_to @song and return if @song.update(songs_params)
     render :edit
   end
